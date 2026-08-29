@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منصّة الأدوات الهندسية — الخلية الضوئية</title>
+  <meta name="description" content="منصّة الأدوات الهندسية — الخلية الضوئية — الخلية الضوئية: حلول الطاقة الشمسية والمتجددة الاحترافية، مع منصّة هندسية متكاملة من الحاسبات وأدوات التصميم.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <!-- Animation On Scroll (AOS) -->
+  <link rel="stylesheet" href="css/vendor/aos.css">
+  <!-- Bootstrap Icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="css/vendor/slick.css">
+  <!-- FANCYBOX CSS  -->
+  <link rel="stylesheet" href="css/vendor/fancybox.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Arabic font (Cairo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- RTL Overrides -->
+  <link rel="stylesheet" href="css/rtl.css">
+  <!-- Solar Platform extension styles -->
+  <link rel="stylesheet" href="css/tools/platform.css">
+</head>
+<body>
+
+  <header class="header border-bottom-color">
+    <div class="b-container">
+      <nav class="navbar navbar-expand-lg py-3 py-lg-1" aria-label="Offcanvas navbar large">
+        <div class="container-fluid">
+          <div class="logo-box">
+            <a class="navbar-brand" href="index.html"><img src="images/KAD-Power-Logo-Header.svg" alt="الشعار الرئيسي" class="header-logo"></a>
+          </div>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="تبديل التنقل">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-start bg-heading-color-3" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header" id="offcanvasNavbarLabel">
+              <div class="logo-box">
+                <a class="navbar-brand" href="index.html"><img src="images/KAD-Power-Logo-Header.svg" alt="شعار القائمة الجانبية" class="header-logo"></a>
+              </div>
+              <button type="button" class="btn-close bg-accent-color-2" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-row justify-content-start justify-content-lg-end align-items-start align-items-lg-center gap-5">
+              <ul class="navbar-nav gap-lg-2 gap-xl-4">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="about-us.html">من نحن</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="d-flex align-items-center">
+                    <a class="nav-link" href="projects.html">المشاريع</a>
+                    <a class="nav-link dropdown-toggle icon-submenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="project-details.html">تفاصيل المشروع</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="d-flex align-items-center">
+                    <a class="nav-link" href="products.html">المنتجات</a>
+                    <a class="nav-link dropdown-toggle icon-submenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="products.html">كتالوج المنتجات</a></li>
+                      <li><a class="dropdown-item" href="product-details/ipl-51314h.html">تفاصيل المنتج</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="d-flex align-items-center">
+                    <a class="nav-link active" href="tools.html">الأدوات الهندسية</a>
+                    <a class="nav-link dropdown-toggle icon-submenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="tools.html">منصة الأدوات</a></li>
+                      <li><a class="dropdown-item" href="tools/load-calculator.html">حاسبة الأحمال</a></li>
+                      <li><a class="dropdown-item" href="tools/panel-calculator.html">حاسبة الألواح</a></li>
+                      <li><a class="dropdown-item" href="tools/battery-calculator.html">حاسبة البطاريات</a></li>
+                      <li><a class="dropdown-item" href="tools/cable-calculator.html">حاسبة الكابلات</a></li>
+                      <li><a class="dropdown-item" href="tools/roi-calculator.html">حاسبة العائد</a></li>
+                      <li><a class="dropdown-item" href="tools/tilt-angle-calculator.html">زاوية الميل</a></li>
+                      <li><a class="dropdown-item" href="tools/production-calculator.html">الإنتاج الشمسي</a></li>
+                      <li><a class="dropdown-item" href="tools/inverter-sizing.html">قياس الإنفرتر</a></li>
+                      <li><a class="dropdown-item" href="tools/pv-array-designer.html">مصمّم مصفوفة PV</a></li>
+                      <li><a class="dropdown-item" href="tools/report-generator.html">مولّد التقرير</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="d-flex align-items-center">
+                    <a class="nav-link" href="#">الصفحات</a>
+                    <a class="nav-link dropdown-toggle icon-submenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="services.html">الخدمات</a></li>
+                      <li><a class="dropdown-item" href="service-details.html">تفاصيل الخدمة</a></li>
+                      <li><a class="dropdown-item" href="pricing-plan.html">خطط الأسعار</a></li>
+                      <li><a class="dropdown-item" href="our-expertise.html">خبراتنا</a></li>
+                      <li><a class="dropdown-item" href="careers.html">الوظائف</a></li>
+                      <li><a class="dropdown-item" href="testimonials.html">آراء العملاء</a></li>
+                      <li><a class="dropdown-item" href="faq.html">الأسئلة الشائعة</a></li>
+                      <li><a class="dropdown-item" href="404.html">404</a></li>
+                      <li><a class="dropdown-item" href="contact-us.html">تواصل معنا</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="d-flex align-items-center">
+                    <a class="nav-link" href="blog.html">مدونتنا</a>
+                    <a class="nav-link dropdown-toggle icon-submenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="single-post.html">تفاصيل المقال</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <div class="mt-0 d-none d-lg-block">
+                <a href="contact-us.html" class="btn-cta-primary align-self-start">
+                  <span class="btn-text">تواصل معنا</span>
+                  <i class="bi bi-arrow-left-circle-fill btn-icon-primary"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Banner -->
+    <section class="section hero-banner position-relative"
+      style="background-image: url('images/aerial-view-of-large-sustainable-electrical-power-X2XNGYL.jpg');">
+      <div class="bg-overlay-5"></div>
+      <div class="b-container h-100 position-relative z-2 overflow-hidden">
+        <div class="d-flex flex-column justify-content-center align-items-center mx-auto text-center text-white gap-4" style="max-width: 760px;">
+          <h1 class="text-white mb-0 from-left" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">منصّة الأدوات الهندسية الشمسية</h1>
+          <div class="spacer-80"></div>
+          <div class="d-flex align-items-end justify-content-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <div class="spacer-bottom-right-30 "></div>
+            <nav aria-label="مسار التنقل">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                <li class="breadcrumb-item active" aria-current="page">الأدوات الهندسية</li>
+              </ol>
+            </nav>
+            <div class="spacer-bottom-left-30 "></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Tools KPIs -->
+    <section class="section pb-0">
+      <div class="b-container">
+        <div class="row g-4 mb-5">
+          <div class="col-6 col-xl-3" data-aos="fade-up"><div class="tool-kpi-card"><i class="bi bi-tools tool-kpi-icon"></i><div><div class="tool-kpi-num count-up">14</div><div class="tool-kpi-label">أداة هندسية</div></div></div></div>
+          <div class="col-6 col-xl-3" data-aos="fade-up" data-aos-delay="100"><div class="tool-kpi-card"><i class="bi bi-cpu tool-kpi-icon"></i><div><div class="tool-kpi-num count-up">7</div><div class="tool-kpi-label">حاسبة احترافية</div></div></div></div>
+          <div class="col-6 col-xl-3" data-aos="fade-up" data-aos-delay="200"><div class="tool-kpi-card"><i class="bi bi-people-fill tool-kpi-icon"></i><div><div class="tool-kpi-num count-up">8500</div><div class="tool-kpi-label">مستخدم نشط</div></div></div></div>
+          <div class="col-6 col-xl-3" data-aos="fade-up" data-aos-delay="300"><div class="tool-kpi-card"><i class="bi bi-file-earmark-bar-graph tool-kpi-icon"></i><div><div class="tool-kpi-num count-up">42000</div><div class="tool-kpi-label">تقرير صادر</div></div></div></div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="row d-flex align-items-end gap-4 gap-xl-0 mb-5">
+          <div class="col-12 col-xl-6 overflow-hidden">
+            <h6 class="mb-3 text-heading-color-2" data-aos="fade-up">منصّة الأدوات</h6>
+            <h2 class="mb-0 text-heading-color-3" data-aos="fade-up" data-aos-delay="100">
+              أدواتٌ هندسيّة <span class="text-heading-color-1">احترافيّة</span> لتصميم منظومتك الشمسيّة</h2>
+          </div>
+          <div class="col-12 col-xl-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="catalog-toolbar d-flex flex-column flex-md-row align-items-stretch gap-3">
+              <div class="search-wrap flex-grow-1">
+                <i class="bi bi-search"></i>
+                <input type="text" id="toolSearch" class="form-control border-0" placeholder="ابحث عن أداة هندسية…">
+              </div>
+              <a href="tools/report-generator.html" class="btn-cta-form">
+                <i class="bi bi-file-earmark-bar-graph-fill ms-2"></i> مولّد التقرير
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category filters -->
+        <div class="catalog-categories d-flex flex-wrap gap-2 mb-5" data-aos="fade-up" data-aos-delay="300">
+              <button type="button" class="tool-filter-btn active" data-tool-filter="all"><i class="bi bi-grid-3x3-gap-fill me-2"></i>كل الأدوات</button>
+              <button type="button" class="tool-filter-btn" data-tool-filter="design"><i class="bi bi-pencil-square me-2"></i>التصميم</button>
+              <button type="button" class="tool-filter-btn" data-tool-filter="safety"><i class="bi bi-shield-fill-check me-2"></i>السلامة</button>
+              <button type="button" class="tool-filter-btn" data-tool-filter="economy"><i class="bi bi-cash-coin me-2"></i>اقتصاد</button>
+              <button type="button" class="tool-filter-btn" data-tool-filter="environment"><i class="bi bi-tree-fill me-2"></i>البيئة</button>
+              <button type="button" class="tool-filter-btn" data-tool-filter="reports"><i class="bi bi-file-earmark-bar-graph-fill me-2"></i>التقارير</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools grid -->
+    <section class="section pt-0">
+      <div class="b-container">
+        <div class="row g-4" id="toolsGrid">
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="design" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+              <a href="tools/load-calculator.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                <h4 class="mb-2 text-secondary-color">حاسبة الأحمال الكهربائية</h4>
+                <p class="text-color-1 mb-4">تحليل احترافي للاستهلاك اليومي وحمل الذروة وعوامل الطلب مع توصيات الإنفرتر والبطارية.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">التصميم</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="design" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+              <a href="tools/panel-calculator.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-grid-1x2-fill"></i></div>
+                <h4 class="mb-2 text-secondary-color">حاسبة الألواح الشمسية</h4>
+                <p class="text-color-1 mb-4">حساب عدد الألواح المطلوبة، قدرة المصفوفة، ساعات الذروة الشمسية، ومعامل التوسعة المستقبلية.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">التصميم</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="design" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+              <a href="tools/battery-calculator.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-battery-charging"></i></div>
+                <h4 class="mb-2 text-secondary-color">حاسبة بنك البطاريات</h4>
+                <p class="text-color-1 mb-4">تحديد سعة Ah / kWh، الجهد، عمق التفريغ، أيام الاستقلالية، ومعامل الحرارة.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">التصميم</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="safety" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+              <a href="tools/cable-calculator.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-bezier"></i></div>
+                <h4 class="mb-2 text-secondary-color">حاسبة مقاس الكابل</h4>
+                <p class="text-color-1 mb-4">حساب التيار، هبوط الجهد، نوع الموصل، أحادي/ثلاثي الطور، مع هامش أمان IEC.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">السلامة</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="economy" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+              <a href="tools/roi-calculator.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                <h4 class="mb-2 text-secondary-color">حاسبة العائد الاقتصادي</h4>
+                <p class="text-color-1 mb-4">التكلفة، الوفورات السنوية، تضخّم الكهرباء، الصيانة، فترة الاسترداد، وصافي الأرباح.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">اقتصاد</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="design" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+              <a href="tools/tilt-angle-calculator.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-triangle-fill"></i></div>
+                <h4 class="mb-2 text-secondary-color">حاسبة زاوية الميل</h4>
+                <p class="text-color-1 mb-4">تحديد أفضل زاوية ميل حسب خط العرض والفصل، مع تحسين الإنتاج الصيفي/الشتوي/السنوي.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">التصميم</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="design" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+              <a href="tools/production-calculator.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-sun-fill"></i></div>
+                <h4 class="mb-2 text-secondary-color">حاسبة الإنتاج الشمسي</h4>
+                <p class="text-color-1 mb-4">حساب الإنتاج اليومي والشهري والسنوي، وانبعاثات CO₂ الموفّرة وما يعادلها من أشجار.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">التصميم</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="design" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+              <a href="tools/inverter-sizing.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-cpu-fill"></i></div>
+                <h4 class="mb-2 text-secondary-color">قياس الإنفرتر</h4>
+                <p class="text-color-1 mb-4">تحديد قدرة الإنفرتر المناسبة بناءً على حمل الذروة وقدرة المصفوفة ومعامل التوسعة.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">التصميم</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="design" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+              <a href="tools/pv-array-designer.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                <h4 class="mb-2 text-secondary-color">مصمّم مصفوفة PV</h4>
+                <p class="text-color-1 mb-4">تصميم تكوين المصفوفة (Series/Parallel)، حساب MPPT، Open-Circuit، Vmp، Imp، Voc.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">التصميم</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="safety" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+              <a href="tools/voltage-drop.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-activity"></i></div>
+                <h4 class="mb-2 text-secondary-color">محلّل هبوط الجهد</h4>
+                <p class="text-color-1 mb-4">حساب نسبة هبوط الجهد على طول الكابل ومقارنة الأنواع المختلفة من الموصلات.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">السلامة</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="safety" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+              <a href="tools/breaker-sizing.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-shield-fill-check"></i></div>
+                <h4 class="mb-2 text-secondary-color">قياس القاطع وفيوزات الحماية</h4>
+                <p class="text-color-1 mb-4">تحديد قدرة القواطع والفيوزات والكسر القصير وفق المعايير الكهربائية الدولية.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">السلامة</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="environment" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+              <a href="tools/co2-calculator.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-tree-fill"></i></div>
+                <h4 class="mb-2 text-secondary-color">حاسبة انبعاثات CO₂</h4>
+                <p class="text-color-1 mb-4">حساب الانبعاثات الكربونية الموفّرة وما يعادلها من غرس أشجار وأميال قيادة سيارة.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">البيئة</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="design" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+              <a href="tools/water-pump-sizing.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-droplet-half"></i></div>
+                <h4 class="mb-2 text-secondary-color">قياس مضخة المياه الشمسية</h4>
+                <p class="text-color-1 mb-4">تحديد قدرة المضخة والمصفوفة لاحتياجات الريّ الزراعي والمشاريع المائية النائية.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">التصميم</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 tool-item" data-tool-cat="reports" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+              <a href="tools/report-generator.html" class="tool-card h-100">
+                <div class="tool-icon"><i class="bi bi-file-earmark-bar-graph-fill"></i></div>
+                <h4 class="mb-2 text-secondary-color">مولّد التقرير الهندسي</h4>
+                <p class="text-color-1 mb-4">تجميع نتائج جميع الحسابات في تقرير PDF احترافي جاهز للعميل أو التقديم الهندسي.</p>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <span class="tool-chip">التقارير</span>
+                  <span class="tool-arrow"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </div>
+              </a>
+            </div>
+        </div>
+
+        <div id="toolEmpty" class="empty-state text-center py-5" hidden>
+          <i class="bi bi-search display-1 text-heading-color-1 mb-3 d-block"></i>
+          <h3 class="text-heading-color-3 mb-2">لا توجد أدوات مطابقة</h3>
+          <p class="text-color-1 mb-0">جرّب كلمة بحث أخرى أو فئة مختلفة.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer overflow-hidden">
+    <div class="b-container d-flex flex-column gap-4">
+      <div class="row d-flex align-items-center gap-4 gap-xl-0">
+        <div class="col-12 col-xl-6">
+          <h3 class="text-secondary-color text-center text-xl-start mb-0">ابقَ على اطّلاع بأحدث ابتكارات وأخبار الطاقة الشمسية.</h3>
+        </div>
+        <div class="col-12 col-xl-6">
+          <div class="d-flex flex-column">
+            <form class="form subscribe needs-validation d-flex flex-column flex-md-row bg-accent-color">
+              <input type="text" name="action" value="subscribe" hidden>
+              <input type="email" name="email" class="form-control form-control-lg border-0" placeholder="أفضل بريد إلكتروني لديك" required>
+              <button type="submit" class="btn btn-cta-form w-100 d-inline-flex d-flex align-items-center justify-content-center submit_subscribe no-bottom-left-radius mt-3 mt-md-0">
+                اشترك الآن
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr class="py-2 text-heading-color-2 opacity-100">
+      <div class="row g-0 g-md-5 mt-0 mx-auto ptpb-120 position-relative z-1">
+        <div class="col-12 col-md-6 col-xl-3 mt-0 ps-0 mb-5 mb-xl-0 d-flex flex-column justify-content-center justify-content-xl-start gap-4">
+          <div class="footer-logo-box d-flex justify-content-center justify-content-md-start">
+            <img src="images/KAD-Power-Logo-Footer-White.svg" alt="شعار التذييل" class="w-100 h-100 object-fit-contain d-block logo-footer">
+          </div>
+          <p class="text-color-1 text-center text-md-start">تُقدّم الطاقة الشمسية والمتجددة الخضراء حلولًا نظيفة ومستدامة للطاقة، مع تقليل الأثر الكربوني وتعزيز الابتكار.</p>
+          <div class="d-flex gap-2 justify-content-center justify-content-md-start">
+            <a href="https://www.facebook.com/share/1Ggep3U5S2/" target="_blank" rel="noopener"><i class="bi bi-facebook icon-social"></i></a>
+            <a href="https://wa.me/967784111990" target="_blank" rel="noopener"><i class="bi bi-whatsapp icon-social"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-2 mt-0 pe-0 mb-5 mb-xl-0">
+          <h4 class="text-center text-md-start text-secondary-color mb-4">روابط سريعة</h4>
+          <ul class="p-0 m-0 d-flex flex-column align-items-center align-items-md-start">
+            <li class="list-unstyled mb-2"><a href="index.html">الرئيسية</a></li>
+            <li class="list-unstyled mb-2"><a href="about-us.html">من نحن</a></li>
+            <li class="list-unstyled mb-2"><a href="services.html">الخدمات</a></li>
+            <li class="list-unstyled mb-2"><a href="projects.html">المشاريع</a></li>
+            <li class="list-unstyled mb-2"><a href="tools.html">الأدوات الهندسية</a></li>
+            <li class="list-unstyled mb-2"><a href="products.html">كتالوج المنتجات</a></li>
+            <li class="list-unstyled mb-2"><a href="blog.html">المدونة</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 mt-0 ps-0 ps-xl-4 mb-5 mb-md-0">
+          <h4 class="text-center text-md-start text-secondary-color mb-4">مصادر مفيدة</h4>
+          <ul class="p-0 m-0 d-flex flex-column align-items-center align-items-md-start">
+            <li class="list-unstyled mb-2"><a href="tools/roi-calculator.html">حاسبة العائد الاقتصادي</a></li>
+            <li class="list-unstyled mb-2"><a href="tools/production-calculator.html">حاسبة الإنتاج الشمسي</a></li>
+            <li class="list-unstyled mb-2"><a href="tools/report-generator.html">مولّد التقرير الهندسي</a></li>
+            <li class="list-unstyled mb-2"><a href="service-details.html">دروس مرئية</a></li>
+            <li class="list-unstyled mb-2"><a href="project-details.html">تقارير الاستدامة</a></li>
+            <li class="list-unstyled mb-2"><a href="service-details.html">شهادات القطاع</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4 mt-0 pe-0 d-flex flex-column align-items-center align-items-md-start">
+          <h4 class="text-center text-md-start text-secondary-color mb-4">معلومات التواصل</h4>
+          <div class="d-flex flex-column flex-md-row align-items-center mb-4 gap-3">
+            <a href="mailto:info@kad-power.com" class="icon-contact"><i class="bi bi-envelope fs-2"></i></a>
+            <div class="d-flex flex-column text-center text-md-start">
+              <h6 class="text-secondary-color mb-1">البريد الإلكتروني</h6>
+              <h4 class="mb-0 text-color-1">info@kad-power.com</h4>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+            <a href="https://maps.app.goo.gl/w7pagB64KjjGkRNA8" target="_blank" class="icon-contact"><i class="bi bi-geo-alt fs-2"></i></a>
+            <div class="d-flex flex-column text-center text-md-start">
+              <h6 class="text-secondary-color mb-1">موقعنا</h6>
+              <h4 class="mb-0 text-color-1">عدن - الجمهورية اليمنية - الشيخ عثمان - شارع عبد القوي</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row position-relative z-0">
+      <div class="border-top-color position-relative z-1">
+        <div class="b-container py-4">
+          <div class="d-flex flex-column flex-md-row flex-wrap justify-content-center justify-content-md-between align-items-center">
+            <p class="text-color-1 mb-2 mb-md-0 footer-rights">© 2026 KAD Power &amp; Contracting Co. Ltd. — جميع الحقوق محفوظة.</p>
+            <ul class="m-0 p-0 d-flex gap-3 footer-terms">
+              <li class="list-unstyled"><a href="#" class="text-color-3 pe-3">سياسة الخصوصية</a></li>
+              <li class="list-unstyled"><a href="#" class="text-color-3">الشروط والأحكام</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/vendor/aos.js"></script>
+  <script src="js/vendor/slick.min.js"></script>
+  <script src="js/vendor/fancybox.umd.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/script-counter.js"></script>
+  <script src="js/submit-form.js"></script>
+  <script src="js/tools/platform.js"></script>
+  <script src="js/tools/tools-hub.js"></script>
+</body>
+
+</html>

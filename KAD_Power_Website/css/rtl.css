@@ -1,0 +1,487 @@
+/* ==========================================================================
+   KAD Power — Arabic / RTL Overrides
+   Loaded AFTER bootstrap.rtl.min.css and style.css.
+   Purpose: convert directional rules baked into the original style.css
+   (which uses physical left/right) into RTL-aware equivalents.
+   No visual element is removed; only direction-dependent geometry is mirrored.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Typography — switch to a high-quality Arabic webfont, while keeping
+   the original Latin font available as a fallback for English snippets
+   (URLs, email addresses, brand name, etc.).
+   -------------------------------------------------------------------------- */
+:root {
+  --font: "Cairo", "Outfit", system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font);
+  direction: rtl;
+  text-align: right;
+}
+
+/* Logical spacing helpers — make absolutely-positioned ornaments behave in RTL */
+
+/* --------------------------------------------------------------------------
+   2. Hero section — original used physical left/right for ornamental
+      "spacer" rounded corners. Mirror them for RTL.
+   -------------------------------------------------------------------------- */
+.home-hero .spacer-bottom-right {
+  /* original: left:-12px; margin-left:-30px */
+  left: auto;
+  right: -12px;
+  margin-left: 0;
+  margin-right: -30px;
+}
+
+.home-hero .spacer-bottom-left {
+  /* original: right:-12px */
+  right: auto;
+  left: -12px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .home-hero .spacer-bottom-right {
+    margin-right: 0;
+  }
+}
+
+/* Vertical social-media strip (rotated 90deg) — originally pinned to left:50px */
+.social-media {
+  left: auto;
+  right: 50px;
+  /* RTL flip of rotation so text reads correctly along axis */
+  transform: rotateZ(-90deg);
+  /* keep visual order of items intact */
+  direction: ltr;
+}
+
+.rotate-90 {
+  transform: rotateZ(-90deg);
+}
+
+/* --------------------------------------------------------------------------
+   3. Background overlays & absolute corners — original style.css uses
+      top:0; left:0 universally. In RTL we mirror those that are
+      semantically "start-aligned".
+   -------------------------------------------------------------------------- */
+.bg-overlay,
+.bg-overlay-2,
+.bg-overlay-3,
+.bg-overlay-4,
+.bg-overlay-5,
+.bg-overlay-6 {
+  /* full-bleed overlays: keep as-is, left:0 is harmless because width:100% */
+}
+
+/* Testimonial right-pinned background — flip to left in RTL */
+.bg-testimonial {
+  right: auto;
+  left: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 25px;
+}
+
+/* Project description block originally at right:62px → mirror to left */
+.project-desc {
+  right: auto;
+  left: 62px;
+}
+
+@media only screen and (max-width: 768.98px) {
+  .project-desc {
+    left: 0;
+  }
+}
+
+.project-desc-inner {
+  /* originally flex-end alignment was visually "outside-right"; in RTL keep flex-end which is now left */
+}
+
+.desc-wrapper {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Service / Team / Project ornament corners
+      Original CSS pinned tiny rounded "spacer" squares to top-left & bottom-right
+      with hard-coded box-shadow offsets. We mirror them.
+   -------------------------------------------------------------------------- */
+.spacer-top-left {
+  border-radius: 0 10px 0 0;
+  box-shadow: 10px -10px 0 0 var(--heading-color-3);
+}
+
+.spacer-top-left-25 {
+  border-radius: 0 25px 0 0;
+  box-shadow: 10px -10px 0 0 var(--secondary-color);
+}
+
+.spacer-top-right-25 {
+  border-radius: 25px 0 0 0;
+  box-shadow: -10px -10px 0 0 var(--secondary-color);
+}
+
+.spacer-bottom-right {
+  border-radius: 0 0 0 25px;
+  box-shadow: -10px 10px 0 0 var(--heading-color-3);
+}
+
+.spacer-bottom-left {
+  border-radius: 0 0 25px 0;
+  box-shadow: 10px 10px 0 0 var(--heading-color-3);
+}
+
+.spacer-bottom-left-50 {
+  border-radius: 0 0 25px 0;
+  box-shadow: 10px 10px 0 0 var(--heading-color-3);
+}
+
+.spacer-bottom-right-40 {
+  border-radius: 0 0 0 25px;
+  box-shadow: -10px 10px 0 0 var(--heading-color-3);
+}
+
+.spacer-bottom-left-30 {
+  border-radius: 0 0 15px 0;
+  box-shadow: 10px 10px 0 0 var(--secondary-color);
+}
+
+.spacer-bottom-right-30 {
+  border-radius: 0 0 0 15px;
+  box-shadow: -10px 10px 0 0 var(--secondary-color);
+}
+
+.spacer-bottom-right-50 {
+  border-radius: 0 0 0 25px;
+  box-shadow: -10px 10px 0 0 var(--secondary-color);
+}
+
+.spacer-bottom-left-50-light {
+  border-radius: 0 0 25px 0;
+  box-shadow: 10px 10px 0 0 var(--secondary-color);
+}
+
+.spacer-special-left {
+  margin-left: 0;
+  margin-right: -12px;
+}
+
+.spacer-special-right {
+  margin-right: 0;
+  margin-left: -12px;
+}
+
+.ms-n15 {
+  /* in RTL, ms-n15 (margin-inline-start:-15) automatically flips via bootstrap.rtl, no override needed */
+}
+
+/* --------------------------------------------------------------------------
+   5. topbot-rounded-6: originally rounded top-right & bottom-right.
+      In RTL, mirror to top-left & bottom-left for the "joined" edge to
+      stay on the correct side.
+   -------------------------------------------------------------------------- */
+.topbot-rounded-6 {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+@media only screen and (max-width: 768.98px) {
+  .topbot-rounded-6 {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Hero content card (top-left corner mirror)
+   -------------------------------------------------------------------------- */
+.hero-content {
+  border-radius: 25px 25px 0 0; /* unchanged, symmetric */
+}
+
+.hero-content h5 {
+  padding: 0 0 10px 10px;        /* mirror */
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   7. Icon-service / team-social little badges originally pinned top-left
+      with bottom-right rounded corner. Mirror to top-right with bottom-left rounded corner.
+   -------------------------------------------------------------------------- */
+.icon-service,
+.team-social {
+  left: auto;
+  right: 0;
+}
+
+.icon-service .icon-inner {
+  padding: 0 0 10px 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 45px;
+}
+
+.team-social-inner {
+  padding: 0 0 15px 15px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 35px;
+}
+
+.icon-service .spacer-top-left-25,
+.team-social .spacer-top-left-25 {
+  /* the masking square sits inside-bottom-right of the inner box now */
+  box-shadow: 10px -10px 0 0 var(--heading-color-3);
+  border-radius: 0 25px 0 0;
+}
+
+.project.service-box .spacer-top-left,
+.why-box.project .spacer-top-left {
+  box-shadow: 10px -10px 0 0 var(--secondary-color);
+  border-radius: 0 10px 0 0;
+}
+
+.project.service-box h6,
+.why-box.project h6 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  padding-right: 10px;
+  padding-left: 15px;
+}
+
+.why-box.project {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+@media only screen and (max-width: 768.98px) {
+  .why-box.project {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. Impact / team info wrappers (pinned to bottom-left / bottom-right)
+   -------------------------------------------------------------------------- */
+.impact-wrapper {
+  left: auto;
+  right: 0;
+}
+
+.impact-content {
+  padding: 20px 0 0 20px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 25px;
+}
+
+.team-info-wrapper {
+  right: auto;
+  left: 0;
+  justify-content: flex-start;
+}
+
+.team-content {
+  border-top-left-radius: 0;
+  border-top-right-radius: 25px;
+}
+
+/* --------------------------------------------------------------------------
+   9. Story / testimonial quote ornament
+   -------------------------------------------------------------------------- */
+.story-box .qoute-ornament {
+  right: auto;
+  left: 0;
+  justify-content: flex-start;
+}
+
+.story-box .qoute-inner {
+  padding: 10px 10px 0 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 47px;
+}
+
+/* --------------------------------------------------------------------------
+   10. FAQ text overlay corners
+   -------------------------------------------------------------------------- */
+.text-faqs {
+  left: auto;
+  right: 12px;
+}
+
+.text-faqs .wrapper-text {
+  padding-right: 0;
+  padding-left: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 25px;
+}
+
+.text-faqs .spacer-top-left {
+  border-radius: 25px 0 0 0;
+  box-shadow: -10px -10px 0 0 var(--secondary-color);
+}
+
+/* --------------------------------------------------------------------------
+   11. Cards / CTA — PDF icon position
+   -------------------------------------------------------------------------- */
+.card-cta.btn-pdf .icon-pdf {
+  left: auto;
+  right: 25px;
+}
+
+.card-cta.btn-pdf .btn-text {
+  padding-left: 0;
+  padding-right: 48px;
+}
+
+/* --------------------------------------------------------------------------
+   12. Nav-pills tab list — original text-align:end keeps logical end (OK)
+   -------------------------------------------------------------------------- */
+.nav-pills .nav-link {
+  text-align: start;
+}
+
+.tab-content > .active {
+  justify-content: flex-start;
+}
+
+/* --------------------------------------------------------------------------
+   13. Dropdown menu (desktop hover positioning)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 991.98px) {
+  .dropdown:hover .dropdown-menu {
+    left: auto;
+    right: 10px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .nav-item.dropdown .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   14. Subscribe form — input padding mirror
+   -------------------------------------------------------------------------- */
+.form.subscribe input {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   15. Offcanvas close button — original right margin reset
+   -------------------------------------------------------------------------- */
+.offcanvas-header .btn-close {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* --------------------------------------------------------------------------
+   16. AOS fade-right ↔ fade-left swap (so motion still enters from
+       the visually-correct side after the layout flip).
+   -------------------------------------------------------------------------- */
+.from-right { transform: translate3d(-50vw, 0, 0); }
+.from-left  { transform: translate3d( 50vw, 0, 0); }
+
+[data-aos="fade-left"]  { /* override transform so it slides in from the new "start" side */ }
+[data-aos="fade-right"] { /* mirror handled by AOS already once dir=rtl */ }
+
+.fade.fade-right {
+  transform: translateX(-20vw);
+}
+.fade.fade-right.show {
+  transform: translateX(0);
+}
+
+/* --------------------------------------------------------------------------
+   17. Border helpers — mirror left/right semantic borders
+   -------------------------------------------------------------------------- */
+.border-right-color {
+  border-right: none;
+  border-left: 1px solid var(--heading-color-1);
+}
+
+@media only screen and (max-width: 768.98px) {
+  .section.hero-banner .border-right-color {
+    border: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   18. Breadcrumb radii — sit at the "start" edge (right in RTL)
+   -------------------------------------------------------------------------- */
+.breadcrumb {
+  border-top-left-radius: 0;
+  border-top-right-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   19. Number / dates / phone numbers should still read LTR
+       (preserves correct visual order for "+1 (800) 123-4567" etc.)
+   -------------------------------------------------------------------------- */
+.ltr,
+a[href^="tel:"],
+a[href^="mailto:"],
+.email-text,
+.phone-text {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   20. Generic: blockquote and list bullets should hang on the right
+   -------------------------------------------------------------------------- */
+ul, ol {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* --------------------------------------------------------------------------
+   21. Cairo font feature settings for crisp Arabic numerals
+   -------------------------------------------------------------------------- */
+body,
+h1, h2, h3, h4, h5, h6, p, a, li, span, button, input, textarea, label {
+  font-feature-settings: "kern", "liga", "calt";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Slightly tighter line-height for Arabic to match original optical balance */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+}
+
+/* Brand text — keep Latin font for the logo wordmark */
+.navbar-brand,
+.footer-logo-box {
+  direction: ltr;
+}
+
+/* Slick carousels keep their internal LTR layout to avoid order glitches */
+.slick-slider,
+.slick-list,
+.slick-track {
+  direction: ltr;
+}
+
+/* But inner slide content reads RTL again */
+.slick-slide > * {
+  direction: rtl;
+  text-align: right;
+}

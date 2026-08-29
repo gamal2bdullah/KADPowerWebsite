@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل المشروع — الخلية الضوئية</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <!-- Animation On Scroll (AOS) -->
+  <link rel="stylesheet" href="css/vendor/aos.css">
+  <!-- Bootstrap Icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="css/vendor/slick.css">
+  <!-- FANCYBOX CSS  -->
+  <link rel="stylesheet" href="css/vendor/fancybox.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Arabic font (Cairo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- RTL Overrides -->
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header border-bottom-color">
+    <div class="b-container">
+      <nav class="navbar navbar-expand-lg py-3 py-lg-1" aria-label="قائمة تنقل جانبية كبيرة">
+        <div class="container-fluid">
+          <div class="logo-box">
+            <a class="navbar-brand" href="index.html"><img src="images/KAD-Power-Logo-Header.svg" alt="الشعار الرئيسي"
+                class="header-logo"></a>
+          </div>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="تبديل التنقل">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-start bg-heading-color-3" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header" id="offcanvasNavbarLabel">
+              <div class="logo-box">
+                <a class="navbar-brand" href="index.html"><img src="images/KAD-Power-Logo-Header.svg" alt="شعار القائمة الجانبية"
+                    class="header-logo"></a>
+              </div>
+              <button type="button" class="btn-close bg-accent-color-2" data-bs-dismiss="offcanvas"
+                aria-label="إغلاق"></button>
+            </div>
+            <div
+              class="offcanvas-body d-flex flex-row justify-content-start justify-content-lg-end align-items-start align-items-lg-center gap-5">
+              <ul class="navbar-nav gap-lg-2 gap-xl-4">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="about-us.html">من نحن</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="d-flex align-items-center">
+                    <a class="nav-link active" href="projects.html">
+                      المشاريع
+                    </a>
+                    <a class="nav-link dropdown-toggle icon-submenu" href="project-details.html#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item active" href="project-details.html">تفاصيل المشروع</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="d-flex align-items-center">
+                    <a class="nav-link" href="project-details.html#">
+                      الصفحات
+                    </a>
+                    <a class="nav-link dropdown-toggle icon-submenu" href="project-details.html#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="services.html">الخدمات</a></li>
+                      <li><a class="dropdown-item" href="service-details.html">تفاصيل الخدمة</a></li>
+                      <li><a class="dropdown-item" href="pricing-plan.html">خطط الأسعار</a></li>
+                      <li><a class="dropdown-item" href="our-expertise.html">خبراتنا</a></li>
+                      <li><a class="dropdown-item" href="careers.html">الوظائف</a></li>
+                      <li><a class="dropdown-item" href="testimonials.html">آراء العملاء</a></li>
+                      <li><a class="dropdown-item" href="faq.html">الأسئلة الشائعة</a></li>
+                      <li><a class="dropdown-item" href="404.html">404</a></li>
+                      <li><a class="dropdown-item" href="contact-us.html">تواصل معنا</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="d-flex align-items-center">
+                    <a class="nav-link" href="blog.html">
+                      مدونتنا
+                    </a>
+                    <a class="nav-link dropdown-toggle icon-submenu" href="project-details.html#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="single-post.html">تفاصيل المقال</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <div class="mt-0 d-none d-lg-block">
+                <a href="contact-us.html" class="btn-cta-primary align-self-start">
+                  <span class="btn-text">تواصل معنا</span>
+                  <i class="bi bi-arrow-left-circle-fill btn-icon-primary"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- #header end -->
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Banner -->
+    <section class="section hero-banner position-relative"
+      style="background-image: url('images/men-working-with-digital-tablet-at-solar-power-sta-HN86J6H.jpg'); background-position: center top;">
+      <div class="bg-overlay-5"></div>
+      <div class="b-container h-100 position-relative z-2 overflow-hidden">
+        <div class="d-flex flex-column justify-content-center align-items-center mx-auto text-center text-white gap-4"
+          style="max-width: 695px;">
+          <h1 class="text-white mb-0 from-left heading-2" data-aos="fade-right" data-aos-delay="300"
+            data-aos-duration="1000">
+            تركيب الطاقة الشمسية لمشروع Green Residences
+          </h1>
+          <div class="spacer-80"></div>
+          <div class="d-flex align-items-end justify-content-center" data-aos="fade-up" data-aos-delay="300"
+            data-aos-duration="1000">
+            <div class="spacer-bottom-right-30 "></div>
+            <nav aria-label="مسار التنقل">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                <li class="breadcrumb-item active" aria-current="page">تفاصيل المشروع</li>
+              </ol>
+            </nav>
+            <div class="spacer-bottom-left-30 "></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #banner -->
+
+    <!-- Project Details -->
+    <section class="section no-pad-bot">
+      <div class="b-container d-flex flex-column gap-5">
+        <div class="row">
+          <div class="col-12 position-relative">
+            <img src="images/solar-power-station-FG6APLR.jpg" height="535px" alt="صورة الموقع"
+              class="w-100 rounded-6 object-cover" data-fancybox="img-lightbox">
+            <div class="project-desc">
+              <div class="project-desc-inner">
+                <div class="spacer-bottom-right-50"></div>
+                <div class="desc-wrapper">
+                  <h4 class="mb-3 text-primary-color">ميزات ومواصفات المشروع</h4>
+                  <div class="d-flex gap-5">
+                    <ul class="p-0 m-0 text-primary-color d-flex flex-column gap-2">
+                      <li class="list-unstyled">نوع النظام:</li>
+                      <li class="list-unstyled">سعة اللوح:</li>
+                      <li class="list-unstyled">عدد الألواح:</li>
+                      <li class="list-unstyled">تخزين البطارية:</li>
+                      <li class="list-unstyled">الوفورات المُقدَّرة:</li>
+                      <li class="list-unstyled">مدة التركيب:</li>
+                    </ul>
+                    <ul class="p-0 m-0 d-flex flex-column justify-content-between justify-content-sm-start gap-2">
+                      <li class="list-unstyled">نظام شمسي متصل بالشبكة</li>
+                      <li class="list-unstyled">10 كيلوواط</li>
+                      <li class="list-unstyled">25</li>
+                      <li class="list-unstyled">لا (متصل بالشبكة)</li>
+                      <li class="list-unstyled">خفض 30% من فواتير الكهرباء</li>
+                      <li class="list-unstyled">أسبوعان</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="spacer-bottom-left-50-light"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex gap-5 gap-xl-0">
+          <div class="col-12 col-xl-4 pe-xl-4 d-flex flex-column flex-md-row flex-xl-column gap-5 order-2 order-xl-1">
+            <div class="d-flex flex-column bg-heading-color-3 rounded-6 p-4 card-project">
+              <h4 class="mb-4 text-secondary-color">مشاريع ذات صلة</h4>
+              <div class="related-blog card position-relative flex flex-row mb-3 gap-4">
+                <a href="single-post.html">
+                  <img src="images/close-up-portrait-of-young-handsome-african-americ-56V7RTL.jpg"
+                    alt="صورة الموقع" class="rounded-4 object-cover"
+                    style="width: 104px; height: 104px;">
+                </a>
+                <div class="d-flex flex-column justify-content-center text-semi-bold">
+                  <a href="project-details.html#" class="text-small text-heading-color-1 mb-0">مكتب GreenTech للشركات</a>
+                  <a href="single-post.html">
+                    <h5 class="mt-1 mb-0 text-secondary-color">خفض 50% من تكاليف الطاقة</h5>
+                  </a>
+                </div>
+              </div>
+              <div class="related-blog card position-relative flex flex-row mb-3 gap-4">
+                <a href="single-post.html">
+                  <img src="images/a-young-happy-family-is-standing-near-solar-panels-R6MB9DC.jpg"
+                    alt="صورة الموقع" class="rounded-4 object-cover"
+                    style="width: 104px; height: 104px;">
+                </a>
+                <div class="d-flex flex-column justify-content-center text-semi-bold">
+                  <a href="project-details.html#" class="text-small text-heading-color-1 mb-0">مساكن SmartSolar</a>
+                  <a href="single-post.html">
+                    <h5 class="mt-1 mb-0 text-secondary-color">حياة مستدامة للعائلات</h5>
+                  </a>
+                </div>
+              </div>
+              <div class="related-blog card position-relative flex flex-row gap-4">
+                <a href="single-post.html">
+                  <img src="images/technician-in-high-visibility-safety-gear-inspects-9TQNA2H.jpg"
+                    alt="صورة الموقع" class="rounded-4 object-cover"
+                    style="width: 104px; height: 104px;">
+                </a>
+                <div class="d-flex flex-column justify-content-center text-semi-bold">
+                  <a href="project-details.html#" class="text-small text-heading-color-1 mb-0">مركز تسوّق يعمل بالطاقة الشمسية</a>
+                  <a href="single-post.html">
+                    <h5 class="mt-1 mb-0 text-secondary-color">طاقة نظيفة للأعمال</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column flex-xl-column flex-lg-row gap-4 card-project">
+              <div class="px-4 pb-4 rounded-6 flex-fill position-relative img-background"
+                style="background-image: url('images/its-a-new-beginning-for-all-22AJTY5.jpg'); padding-top: 230px">
+                <div class="bg-overlay-3 z-1 rounded-6"></div>
+                <div class="d-flex flex-column gap-4 z-1 position-relative">
+                  <h3 class="mb-0 me-0 me-xl-5 text-secondary-color">هل أنت مستعد للانتقال إلى الطاقة الشمسية؟</h3>
+                  <p class="mb-0 text-color-1">اتخذ الخطوة الأولى نحو غدٍ أكثر اخضرارًا. تواصل معنا اليوم لاستشارة مجانية واكتشف كيف يمكن لالخلية الضوئية أن تُحوّل احتياجاتك من الطاقة!</p>
+                  <a href="contact-us.html" class="btn-cta-primary align-self-start">
+                    <span class="btn-text">اطلب عرض سعر مجاني</span>
+                    <i class="bi bi-arrow-left-circle-fill btn-icon-primary"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-8 ps-xl-4 order-1 order-xl-2">
+            <div class="d-flex flex-column gap-4">
+              <h3 class="mb-0 text-heading-color-2">نظرة عامة على المشروع</h3>
+              <p class="mb-0">
+                صُمِّم مشروع Green Residences الشمسي لتوفير طاقة نظيفة ومستدامة لمجتمع سكني عصري. هدفنا كان تركيب نظام شمسي فعّال متصل بالشبكة يُقلّل تكاليف الكهرباء ويُعزّز نمط حياة صديق للبيئة. تم تنفيذ المشروع وفق أعلى معايير الجودة، مع مراعاة الاستدامة والكفاءة على المدى البعيد.
+              </p>
+              <h3 class="mb-0 text-heading-color-2">التحديات والحلول</h3>
+              <p class="mb-0">
+                نُسلّط الضوء على أبرز التحديات التي واجهناها خلال المشروع وكيفية تجاوزها. واجه فريقنا قيودًا في المساحة المتاحة على الأسطح، وحاجةً ماسّة إلى كفاءة طاقة قصوى، وتعقيدات في الدمج مع الأنظمة الكهربائية القائمة، وقد تمكّنا من تجاوز جميع هذه التحديات بحلول مبتكرة.
+              </p>
+              <div class="col-12 col-md-6 col-xl-5 d-flex flex-column flex-md-row w-100 gap-3 gap-md-5">
+                <div class="d-flex flex-column text-primary-color">
+                  <h4 class="mb-3">التحديات:</h4>
+                  <ul class="p-0 m-0">
+                    <li class="list-unstyled mb-3 d-flex align-items-center">
+                      <i class="bi bi-circle-fill text-heading-color-1 me-4 text-small"></i>
+                      مساحة محدودة على السطح لتركيب الألواح الشمسية
+                    </li>
+                    <li class="list-unstyled mb-3 d-flex align-items-center">
+                      <i class="bi bi-circle-fill text-heading-color-1 me-4 text-small"></i>
+                      الحاجة إلى كفاءة طاقة مثلى
+                    </li>
+                    <li class="list-unstyled mb-3 d-flex align-items-center">
+                      <i class="bi bi-circle-fill text-heading-color-1 me-4 text-small"></i>
+                      الدمج مع الأنظمة الكهربائية القائمة
+                    </li>
+                  </ul>
+                </div>
+                <div class="d-flex flex-column text-primary-color">
+                  <h4 class="mb-3">الحلول:</h4>
+                  <ul class="p-0 m-0">
+                    <li class="list-unstyled mb-3 d-flex align-items-center">
+                      <i class="bi bi-circle-fill text-heading-color-1 me-4 text-small"></i>
+                      مساحة محدودة على السطح لتركيب الألواح الشمسية
+                    </li>
+                    <li class="list-unstyled mb-3 d-flex align-items-center">
+                      <i class="bi bi-circle-fill text-heading-color-1 me-4 text-small"></i>
+                      الحاجة إلى كفاءة طاقة مثلى
+                    </li>
+                    <li class="list-unstyled mb-3 d-flex align-items-center">
+                      <i class="bi bi-circle-fill text-heading-color-1 me-4 text-small"></i>
+                      الدمج مع الأنظمة الكهربائية القائمة
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <h3 class="mb-0 text-heading-color-2">النتائج والأثر</h3>
+              <p class="mb-0">
+                منذ التركيب، شهد مشروع Green Residences انخفاضًا بنسبة 30% في تكاليف الكهرباء وتراجعًا كبيرًا في انبعاثات الكربون. وقد أثبت هذا المشروع بنجاح كيف يمكن للطاقة الشمسية أن تُمكّن المجتمعات المستدامة وتُقدّم نموذجًا يُحتذى به في حلول الطاقة الخضراء.
+              </p>
+              <div class="project-photos">
+                <div class="project-items">
+                  <img src="images/business-people-technician-and-discussion-with-sol-B2TWQWB.jpg"
+                    alt="صورة الموقع" class="w-100 rounded-6"
+                    data-fancybox="img-lightbox">
+                </div>
+                <div class="project-items">
+                  <img src="images/solar-panels-and-wind-turbine-near-ijssel-river-th-7CVYMXU.jpg"
+                    alt="صورة الموقع" class="w-100 rounded-6"
+                    data-fancybox="img-lightbox">
+                </div>
+                <div class="project-items">
+                  <img src="images/happy-woman-portrait-and-technician-with-tablet-fo-3FV7AL6.jpg"
+                    alt="صورة الموقع" class="w-100 rounded-6"
+                    data-fancybox="img-lightbox">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #project details -->
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="b-container d-flex flex-column gap-5">
+        <div class="row">
+          <div class="col-12 d-flex flex-column align-items-center gap-4">
+            <h6 class="mb-0 text-heading-color-2 text-center">قصص من عملائنا</h6>
+            <h2 class="mb-0 text-primary-color text-center">تجارب حقيقية وأثرٌ حقيقي</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-xl-4 mb-4 mb-xl-0" data-aos="fade-right" data-aos-delay="400"
+            data-aos-duration="800">
+            <div class="story-box">
+              <p class="text-color-1">«كان الانتقال إلى الطاقة الشمسية سلسًا، وقدّم فريقهم خدمة استثنائية من الاستشارة وحتى التركيب. نحن سعداء بالوفورات والأثر على الاستدامة، ونوصي بشدة بالخلية الضوئية لتوفير الطاقة.»</p>
+              <div class="d-flex align-items-center">
+                <img src="images/horizontal-shot-of-good-looking-funny-and-happy-ma-X5RMJTP.jpg" alt="صورة عميل">
+                <div class="profile-info d-flex flex-column ms-3">
+                  <h5 class="mb-0 text-secondary-color">مايكل داوسون</h5>
+                  <span class="text-small text-heading-color-1">صاحب أعمال</span>
+                </div>
+                <div class="qoute-ornament">
+                  <div class="w-100 d-flex justify-content-end">
+                    <div class="spacer-bottom-right-50"></div>
+                  </div>
+                  <div class="spacer-bottom-right-50"></div>
+                  <div class="qoute-inner">
+                    <div class="qoute-wrapper">
+                      <i class="bi bi-quote fs-1 text-heading-color-1"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 mb-4 mb-xl-0" data-aos="fade-right" data-aos-delay="200"
+            data-aos-duration="800">
+            <div class="story-box">
+              <p class="text-color-1">«تجاوزت الخلية الضوئية توقعاتنا! كان التركيب سريعًا والفريق على درجة عالية من الاحتراف. أصبحت فواتيرنا أقل، ونشعر بالرضا لاستخدامنا طاقة نظيفة. نوصي بشدة بخدمتهم في الطاقة الشمسية.»</p>
+              <div class="d-flex align-items-center">
+                <img src="images/waist-up-shot-of-charming-female-freelance-journal-9QUQDSC.jpg" alt="صورة عميل">
+                <div class="profile-info d-flex flex-column ms-3">
+                  <h5 class="mb-0 text-secondary-color">صوفيا مارتينيز</h5>
+                  <span class="text-small text-heading-color-1">صاحبة منزل</span>
+                </div>
+                <div class="qoute-ornament">
+                  <div class="w-100 d-flex justify-content-end">
+                    <div class="spacer-bottom-right-50"></div>
+                  </div>
+                  <div class="spacer-bottom-right-50"></div>
+                  <div class="qoute-inner">
+                    <div class="qoute-wrapper">
+                      <i class="bi bi-quote fs-1 text-heading-color-1"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4" data-aos="fade-right" data-aos-delay="0"
+            data-aos-duration="800">
+            <div class="story-box">
+              <p class="text-color-1">«الاستثمار في الطاقة الشمسية مع الخلية الضوئية كان أفضل قرار لأعمالنا. كانت العملية سلسة، والوفورات على المدى البعيد تجعله استثمارًا رائعًا. نُحب خدماتهم ونوصي بها بشدة.»</p>
+              <div class="d-flex align-items-center">
+                <img src="images/pleased-to-meet-you-smart-attractive-redhead-man-w-G6AMV2J.jpg" alt="صورة عميل">
+                <div class="profile-info d-flex flex-column ms-3">
+                  <h5 class="mb-0 text-secondary-color">دانيال سميث</h5>
+                  <span class="text-small text-heading-color-1">مستشار بيئي</span>
+                </div>
+                <div class="qoute-ornament">
+                  <div class="w-100 d-flex justify-content-end">
+                    <div class="spacer-bottom-right-50"></div>
+                  </div>
+                  <div class="spacer-bottom-right-50"></div>
+                  <div class="qoute-inner">
+                    <div class="qoute-wrapper">
+                      <i class="bi bi-quote fs-1 text-heading-color-1"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #testimonials -->
+
+  </main>
+  <!-- End Main Content -->
+
+  <!-- Footer -->
+  <footer class="footer overflow-hidden">
+    <div class="b-container d-flex flex-column gap-4">
+      <div class="row d-flex align-items-center gap-4 gap-xl-0">
+        <div class="col-12 col-xl-6">
+          <h3 class="text-secondary-color text-center text-xl-start mb-0">ابقَ على اطّلاع بأحدث ابتكارات وأخبار الطاقة الشمسية.</h3>
+        </div>
+        <div class="col-12 col-xl-6">
+          <div class="d-flex flex-column">
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div id="liveToast" class="toast success_msg_subscribe text-bg-light" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="d-flex">
+                  <div class="toast-body">
+                    <i class="bi bi-check-circle-fill"></i> تم تسجيل اشتراكك بنجاح.
+                  </div>
+                  <button type="button" class="btn me-2 m-auto" data-bs-dismiss="toast" aria-label="إغلاق">
+                    <i class="bi bi-x-lg"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <form class="form subscribe needs-validation d-flex flex-column flex-md-row bg-accent-color">
+              <input type="text" name="action" value="subscribe" hidden>
+              <input type="email" name="email" id="email" class="form-control form-control-lg border-0"
+                placeholder="أفضل بريد إلكتروني لديك" required>
+              <div class="invalid-feedback text-white">
+                يرجى إدخال صيغة بريد إلكتروني صحيحة (مثال: user@example.com).
+              </div>
+              <button type="submit"
+                class="btn btn-cta-form w-100 d-inline-flex d-flex align-items-center justify-content-center submit_subscribe no-bottom-left-radius mt-3 mt-md-0">
+                اشترك الآن
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr class="py-2 text-heading-color-2 opacity-100">
+      <div class="row g-0 g-md-5 mt-0 mx-auto ptpb-120 position-relative z-1">
+        <div
+          class="col-12 col-md-6 col-xl-3 mt-0 ps-0 mb-5 mb-xl-0 d-flex flex-column justify-content-center justify-content-xl-start gap-4">
+          <div class="footer-logo-box d-flex justify-content-center justify-content-md-start">
+            <img src="images/KAD-Power-Logo-Footer-White.svg" alt="شعار التذييل"
+              class="w-100 h-100 object-fit-contain d-block logo-footer">
+          </div>
+          <p class="text-color-1 text-center text-md-start">تُقدّم الطاقة الشمسية والمتجددة الخضراء حلولًا نظيفة ومستدامة للطاقة، مع تقليل الأثر الكربوني وتعزيز الابتكار.</p>
+          <div class="d-flex gap-2 justify-content-center justify-content-md-start">
+            <a href="https://www.facebook.com/share/1Ggep3U5S2/" target="_blank" rel="noopener"><i class="bi bi-facebook icon-social"></i></a>
+            <a href="https://wa.me/967784111990" target="_blank" rel="noopener"><i class="bi bi-whatsapp icon-social"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-2 mt-0 pe-0 mb-5 mb-xl-0">
+          <h4 class="text-center text-md-start text-secondary-color mb-4">روابط سريعة</h4>
+          <ul class="p-0 m-0 d-flex flex-column align-items-center align-items-md-start">
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="index.html">
+                الرئيسية</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="about-us.html">
+                من نحن</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="services.html">
+                الخدمات</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="projects.html">
+                المشاريع</a>
+            </li>
+                        <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="tools.html">
+                الأدوات الهندسية</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="products.html">
+                كتالوج المنتجات</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="blog.html">
+                المدونة</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="contact-us.html">
+                تواصل</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 mt-0 ps-0 ps-xl-4 mb-5 mb-md-0">
+          <h4 class="text-center text-md-start text-secondary-color mb-4">مصادر مفيدة</h4>
+          <ul class="p-0 m-0 d-flex flex-column align-items-center align-items-md-start">
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="projects.html">
+                دراسات الحالة</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="service-details.html">
+                حاسبة توفير الطاقة</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="service-details.html">
+                الكتب الإلكترونية والأدلة</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="service-details.html">
+                دروس مرئية</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="project-details.html">
+                تقارير الاستدامة</a>
+            </li>
+            <li class="d-flex align-items-center list-unstyled mb-2">
+              <a href="service-details.html">
+                شهادات القطاع</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4 mt-0 pe-0 d-flex flex-column align-items-center align-items-md-start">
+          <h4 class="text-center text-md-start text-secondary-color mb-4">معلومات التواصل</h4>
+          <div class="d-flex flex-column flex-md-row align-items-center mb-4 gap-3">
+            <a href="mailto:info@kad-power.com" class="icon-contact"><i class="bi bi-envelope fs-2"></i></a>
+            <div class="d-flex flex-column text-center text-md-start">
+              <h6 class="text-secondary-color mb-1">البريد الإلكتروني</h6>
+              <h4 class="mb-0 text-color-1">info@kad-power.com</h4>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+            <a href="https://maps.app.goo.gl/w7pagB64KjjGkRNA8" target="_blank" class="icon-contact"><i class="bi bi-geo-alt fs-2"></i></a>
+            <div class="d-flex flex-column text-center text-md-start">
+              <h6 class="text-secondary-color mb-1">موقعنا</h6>
+              <h4 class="mb-0 text-color-1">عدن - الجمهورية اليمنية - الشيخ عثمان - شارع عبد القوي</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row position-relative z-0">
+      <div class="border-top-color position-relative z-1">
+        <div class="b-container py-4">
+          <div class="d-flex flex-column flex-md-row flex-wrap justify-content-center justify-content-md-between align-items-center">
+            <p class="text-color-1 mb-2 mb-md-0 footer-rights">© 2026 KAD Power &amp; Contracting Co. Ltd. — جميع الحقوق محفوظة.</p>
+            <ul class="m-0 p-0 d-flex gap-3 footer-terms">
+              <li class="list-unstyled"><a href="project-details.html#" class="text-color-3 pe-3">سياسة الخصوصية</a></li>
+              <li class="list-unstyled"><a href="project-details.html#" class="text-color-3">الشروط والأحكام</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <!-- Scripts -->
+  <!-- jQuery -->
+  <script src="js/vendor/jquery.min.js"></script>
+  <!-- Animation On Scroll (AOS) -->
+  <script src="js/vendor/aos.js"></script>
+  <!-- Slick JS -->
+  <script src="js/vendor/slick.min.js"></script>
+  <!-- FANCY BOX -->
+  <script src="js/vendor/fancybox.umd.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script-counter.js"></script>
+  <script src="js/submit-form.js"></script>
+  <script src="js/script.js"></script>
+  <!-- End Scripts -->
+</body>
+
+</html>

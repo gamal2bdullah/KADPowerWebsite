@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 70" >
+<style>@media (prefers-reduced-motion:reduce){ circle animate{display:none;} }</style><circle cx="30" cy="40" r="9" fill="#1A2B6B">
+          <animate attributeName="cy" values="40;22;40" dur="0.9s" begin="0.0s" repeatCount="indefinite" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+          <animate attributeName="opacity" values="0.5;1;0.5" dur="0.9s" begin="0.0s" repeatCount="indefinite"/>
+        </circle><circle cx="75" cy="40" r="9" fill="#99F36C">
+          <animate attributeName="cy" values="40;22;40" dur="0.9s" begin="0.16s" repeatCount="indefinite" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+          <animate attributeName="opacity" values="0.5;1;0.5" dur="0.9s" begin="0.16s" repeatCount="indefinite"/>
+        </circle><circle cx="120" cy="40" r="9" fill="#1A2B6B">
+          <animate attributeName="cy" values="40;22;40" dur="0.9s" begin="0.32s" repeatCount="indefinite" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+          <animate attributeName="opacity" values="0.5;1;0.5" dur="0.9s" begin="0.32s" repeatCount="indefinite"/>
+        </circle>
+</svg>
